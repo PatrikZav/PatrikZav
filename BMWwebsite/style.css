@@ -1,0 +1,767 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    color: #EEF1EA;
+    background-color: #1d1f20;
+    font-family: Montserrat;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+}
+
+.UPbutton{
+    float: right;
+    position: fixed;
+    bottom: 20px;
+    right: 24px;
+    z-index: 1000;
+}
+
+.UPbutton img{
+    width: 1vw;
+    background-color: #d5d8d2;
+    filter: brightness(0.9);
+    border-radius: 100%;
+    padding: 10px;
+}
+
+/*----------Header----------*/
+
+/*Menu*/
+.headerMenu{
+    position: absolute;
+    margin-top: 30px;
+    left: 50%;
+    transform: translateX(-50%); 
+    background-color: rgba(29, 31, 32, 0.5);
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 25px 0px;
+    backdrop-filter: blur(22.5px);
+    z-index: 10;
+    width: 90vw;
+}
+
+.headerMenu .container{
+    max-width: 80vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.leftMenu{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    
+}
+
+.whiteLine{
+    background-color: #EEF1EA;
+    height: 40px;
+    width: 2px;
+}
+
+.menu{
+    
+    display: flex;
+    align-items: center;
+}
+
+.menu ul li{
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.menu ul li a{
+    text-decoration: none;
+    color: #EEF1EA;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.menu ul li a:hover{
+    background-color: rgba(206,113,71,0.4);
+    border-radius: 8px;
+    padding: 10px 5px;
+    transition: 0.2s;
+}
+
+.menu ul .line{
+    margin: 0;
+    font-size: 25px;
+    font-weight: 300;
+}
+
+.active{
+    border-bottom: solid 2px #EEF1EA;
+    padding-bottom: 7px;
+}
+
+/*Header*/
+.headerImg{
+    background: url("../BMWwebsite/obrazky/headerBMWM4.png") center center no-repeat;
+    padding-bottom: 30vw;
+    background-size: 85vw;
+}
+
+.BMWstripe{
+    height: 10px;
+    width: 300px;
+    background-image: linear-gradient(120deg, rgb(0, 82, 142) 33%, rgb(0, 49, 96) 0px, rgb(0, 49, 96) 66%, rgb(181, 31, 19) 0px);
+    margin-bottom: 120px;
+    margin-left: 7vw;
+}
+
+/*----------Section Models----------*/
+.sectionModels h1{
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 72px;
+    margin-bottom: 10px;
+}
+
+.sectionModels p{
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.sectionModels .container{
+    max-width: 1000px;
+    margin: auto 45vw auto 15vw;
+    text-align: left;
+}
+
+.sectionButton{
+    background-color: #1c69d4;
+    padding: 10px 0px;
+    max-width: 138px;
+}
+
+.sectionButton a{
+    text-decoration: none;
+    color: #EEF1EA;
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+}
+
+section .BMWstripe{
+    height: 350px;
+    width: 5px;
+    background-image: linear-gradient(120deg, rgb(0, 82, 142) 33%, rgb(0, 49, 96) 0px, rgb(0, 49, 96) 66%, rgb(181, 31, 19) 0px);
+    display: block;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+/*Cars*/
+.cars{
+    background-color: #000;
+    padding-bottom: 20px;
+}
+
+.cars .container{
+    margin: 0;
+    max-width: 100%;
+    height: 55vw;
+    
+}
+
+.imgBackground{
+    width: 100%;
+    position: absolute;
+}
+
+.cars img{
+    width: 100%;
+    height: 50vw;
+}
+
+.textBackground{ 
+    position:relative; 
+    padding: 513px 0px 0px 95px;
+}
+
+.textBackground p{
+    font-size: 64px;
+    font-family: Playfair;
+    line-height: 1px;
+}
+
+.modelText{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 45px;
+    padding-bottom: 40px;
+}
+
+.modelText p{
+    font-family: Playfair;
+    font-size: 40px;
+    line-height: 1px;
+}
+
+.modelText .smallText{
+    font-size: 16px;
+}
+
+.sectionCars .BMWstripe{
+    height: 200px;
+    width: 5px;
+}
+
+/*----------Section 350 HP----------*/
+.section350HP{
+    box-shadow: 4px 9px 83px 70px rgba(0,0,0,1);
+}
+
+.section350HP .container{
+    margin: 0;
+    max-width: 100%;
+}
+
+.hp350{
+    position:relative;
+    display: flex;
+    justify-content: center;
+    padding: 15vw 0 17vw 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: inset 5px -4px 83px 47px rgba(0,0,0,1);
+}
+
+.hp350 h2{
+    margin:0;
+    font-size: 15vw;
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.hp350Background{
+    margin: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.hp350Background img{
+    height: 50vw;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+/*----------Section Technology----------*/
+.sectionTechnology .container{
+    max-width: 1400px;
+    height: 65vw;
+}
+
+.upperText530hp{
+    margin-top: 130px;
+    max-width: 2000px;
+}
+
+.upperText530hp p{
+    width: 600Px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.firstTechnology, .secondTechnology{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5vw;
+}
+
+.firstTechnology .textTechnology{
+    margin-right: 7vw;
+}
+
+.secondTechnology .textTechnology{
+    margin-left: 7vw;
+}
+
+.textTechnology h2{
+    font-size: 28px;
+}
+
+.textTechnology p{
+    font-size: 16px;
+    text-align: justify;
+    font-weight: 600;
+}
+
+.imgTechnology img{
+    width: 35vw;
+}
+
+/*----------Section Empy Part----------*/
+.sectionEmptyPart{
+    background-image: url('obrazky/emptyBackground.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    filter: brightness(0.6);
+}
+
+.sectionEmptyPart .container{
+    max-width: 100%;
+    height: 25vw;
+}
+
+/*----------Section Technival Details----------*/
+.sectionTechnicalDetails{
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.sectionTechnicalDetails h2{
+    font-size: 28px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.sectionTechnicalDetails .container{
+    max-width: 1000px;
+}
+
+.TechnicalDetailsText{
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.TechnicalDetailsText h2{
+    font-weight: 500;
+    font-size: 28px;
+    text-transform: none;
+    align-content: center;
+}
+
+.TechnicalDetailsText p{
+    margin-left: auto;
+    text-align: justify;
+    width: 25vw;
+    font-size: 16px;
+}
+
+.TechnicalDetailsText span{
+    border-top: #EEF1EA solid 2px;
+    padding-top: 10px;
+}
+
+/*Details*/
+
+.firstDetails, .secondDetails{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5vw;
+}
+
+.textDetails{
+    font-size: 16px;    
+    align-content: center;
+    text-align: justify;
+}
+
+.textDetails span{
+    font-weight: 700;
+}
+
+.firstDetails .imgDetails{
+    margin-right: 8vw;
+}
+
+.firstDetails .imgDetails p{
+    font-size: 14px;
+    color: #bdbdbd;
+    font-weight: 400;
+}
+
+.secondDetails .imgDetails{
+    margin-left: 8vw 
+}
+
+.imgDetails img{
+    width: 27vw;
+}
+
+/*----------The M4 ----------*/
+.sectionTheM4 .container{
+    max-width: 1600px;
+    height: 700px;
+}
+
+.sectionTheM4 h2{
+    font-size: 40px;
+    font-weight: 400;
+    padding-left: 80px;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.sectionTheM4 img{
+    width: 1000px;
+    display: block;
+    margin-bottom: 40px;
+}
+
+.sectionTheM4 a{
+    text-decoration: none;
+    color: #EEF1EA;
+    font-size: 16px;
+    background-color: #1c69d4;
+    padding: 15px 20px;
+    margin-left: 80px;
+    
+}
+
+/*---------- Section Contact ----------*/
+.sectionContact .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    height: 75vh;
+}
+
+.sectionContact h2{
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.contactForm img{
+    width: 600px;
+    height: 550px;
+    position: absolute;
+    filter: brightness(0.4);
+}
+
+.contactForm textarea{
+    height: 100px;
+}
+
+.contactForm button{
+    position: relative;
+    margin-left: 50px;
+    cursor: pointer;
+
+    border-radius: 50px;
+    width: 100px;
+    height: 40px;
+
+    background-color: rgba(28, 105, 212, 0.5);
+    border: 1px solid #EEF1EA;
+    color: #EEF1EA;
+}
+
+.contactForm button:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+.contact-inputs{
+    background: none;
+    border: none;
+    border-bottom: #ffffff solid 2px;
+    height: 50px;
+    width: 500px;
+    position: relative;
+    margin-left: 50px;
+    color: #EEF1EA;
+}
+
+.contact-inputs1{
+    margin-top: 70px;
+}
+
+.contact-inputs::placeholder{
+    color: #EEF1EA;
+}
+
+
+
+/*----------Footer----------*/
+/*FooterUP*/
+.footerUP .container{
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+    margin: 0 200px;
+    height: 400px;
+}
+
+.footerUP ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footerUP h5{
+    font-size: 16px;
+    border-bottom: solid 1px hsla(0,0%,73%,.2);
+    padding-bottom: 10px;
+}
+
+.footerUP li{
+    margin: 15px 0;
+}
+
+.footerUP a{
+    text-decoration: none;
+    color: #eef1eaa8;
+    font-size: 16px;
+}
+
+.footerUP a:hover{
+    color: #EEF1EA;
+    transition: 0.4s;
+}
+
+/*FooterDown*/
+.footerDown .container{
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    max-width: 80%;
+}
+
+.footerDown a{
+    text-decoration: none;
+    color: #EEF1EA;
+    font-size: 16px;
+}
+
+/*----------------------------------------*/
+/*Limited Editions*/
+/*----------------------------------------*/
+
+/*----------Header----------*/
+.video .container{
+    max-width: 100%;
+    height: 90vh;
+}
+
+.video video{
+    width: 100%;
+    object-fit: cover;
+    max-height: 90vh;
+    overflow: hidden;
+}
+
+.BMWstripe2{
+    height: 10px;
+    width: 300px;
+    background-image: linear-gradient(120deg, rgb(0, 82, 142) 33%, rgb(0, 49, 96) 0px, rgb(0, 49, 96) 66%, rgb(181, 31, 19) 0px);
+    margin-bottom: 100px;
+}
+
+.menu .menu2 li a:hover{
+    background-color: rgba(28,105,212,0.7);
+    border-radius: 8px;
+    padding: 10px 5px;
+    transition: 0.2s;
+}
+
+/*---------- section Special ----------*/
+.sectionSpecial .container{
+    display: flex;
+    flex-direction: column;
+    height: 110vh;
+    max-width: 100%;
+}
+
+.sectionSpecial h2{
+    font-size: 2vw;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-left: 13vw;
+    line-height: 1px;
+}
+
+.sectionSpecial h3{
+    font-size: 1.5vw;
+    border-bottom: solid 3px #1c69d4;
+    padding-bottom: 1vh;
+    width: fit-content;
+    font-weight: 300;
+    margin-left: 15vw;
+}
+
+.sectionSpecial label{
+    width: fit-content;
+    margin: 1vw 25vw;
+    cursor: pointer;
+
+    font-size: 1.1vw;
+    color: #eef1eabb;
+}
+
+.sectionSpecial label:hover{
+    color: #EEF1EA;
+    transition: 0.4s;
+}
+
+.sectionSpecial .kithImg, .cslImg, .jahreImg, .gt3Img, .gt4Img, .csImg, .kithInfo, .cslInfo, .jahreInfo, .gt3Info, .gt4Info, .csInfo{
+    position: absolute;
+    right: 15vw;
+    width: 30vw;
+    margin-top: 25vh;
+
+    opacity: 0;
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.kithInfoText, .cslInfoText, .jahreInfoText, .gt3InfoText, .gt4InfoText, .csInfoText{
+    position: absolute;
+    right: 15vw;
+    margin-top: 60vh;
+
+    opacity: 0;
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.specialTable {
+    border: 2px solid #1c69d4;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.specialTable td, .specialTable th {
+    border: 1px solid #1c69d4;
+    padding: 5px 30px;
+}
+
+.specialTable th{padding-top: 20px;}
+.specialTable td{padding-bottom: 20px;}
+
+.specialTable td, .specialTable th{
+    border: none;
+    font-size: 1.5vh;
+}
+
+.specialTable th {
+    color: #EEF1EA;
+    font-weight: bold;
+}
+
+/*Gallery*/
+.kithGallery, .cslGallery, .jahreGallery, .gt3Gallery, .gt4Gallery, .csGallery {
+    position: absolute;
+    margin: 75vh 8vw;
+
+    opacity: 0;
+    transition: opacity 0.5s, transform 0.5s;
+    pointer-events: none;
+}
+
+.kithGallery img,
+.cslGallery img,
+.jahreGallery img,
+.gt3Gallery img,
+.gt4Gallery img,
+.csGallery img {
+    width: 20vw;
+    overflow: hidden;
+    height: 25vh;
+    margin: 0 0.2vw;
+    
+}
+
+/*--Hover, Checked--*/
+/*Hover - Img*/
+#kith:hover ~ .kithImg,
+#csl:hover ~ .cslImg,
+#jahre:hover ~ .jahreImg,
+#gt3:hover ~ .gt3Img,
+#gt4:hover ~ .gt4Img,
+#cs:hover ~ .csImg{
+    opacity: 1;
+    transform: scale(1);
+    z-index: 1;
+}
+
+/*Checked - Info*/
+#kith:checked ~ .kithInfo,
+#csl:checked  ~ .cslInfo,
+#jahre:checked ~ .jahreInfo,
+#gt3:checked ~ .gt3Info,
+#gt4:checked ~ .gt4Info,
+#cs:checked ~ .csInfo{
+    opacity: 1;
+    transform: scale(1);
+}
+
+/*Checked - InfoText*/
+#kith:checked ~ .kithInfoText,
+#csl:checked ~ .cslInfoText,
+#jahre:checked ~ .jahreInfoText,
+#gt3:checked ~ .gt3InfoText,
+#gt4:checked ~ .gt4InfoText,
+#cs:checked ~ .csInfoText{
+    opacity: 1;
+    transform: scale(1);
+}
+
+/*Checked - Gallery*/
+#kith:checked ~ .kithGallery,
+#csl:checked ~ .cslGallery,
+#jahre:checked ~ .jahreGallery,
+#gt3:checked ~ .gt3Gallery,
+#gt4:checked ~ .gt4Gallery,
+#cs:checked ~ .csGallery {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+}
+
+/*-----------------*/
+/*---------- Section Questions ----------*/
+.sectionQuestion{
+    text-align: center;
+}
+
+.sectionQuestion h2{
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.sectionQuestion details{
+    padding: 3vh 0;
+    max-width: 40vw;
+    margin: auto;
+
+    text-align: start;
+    cursor: pointer;
+    border-top: 1px solid #bdbdbd;
+    border-bottom: 1px solid #bdbdbd;
+    
+}
+
+.sectionQuestion summary{
+    font-size: 23px;
+    font-weight: 300;
+}
+
+.sectionQuestion summary:hover{
+    color: #1c69d4;
+    transition: 0.2s;
+}
+
+.sectionQuestion p{
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 5vh;
+}
+
+.sectionQuestion strong{
+    font-weight: 500;
+}
