@@ -1,0 +1,185 @@
+body{
+    font-family: poppins;
+    color: white;
+    background: rgb(180, 180, 180);
+}
+
+/*Menu*/
+header{
+    
+    margin: -10px -10px 0 -10px;
+    background: rgb(73, 73, 73);
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+
+header nav ul {
+    list-style-type: none; /* Odebere tečky z odstavce*/
+    display: flex; /* D8 text vedle sebe*/
+}
+
+header nav li {
+    margin: 10px 20px 0 20px;
+    font-size: 20px;
+}
+
+header nav li :hover {
+    border-bottom: solid white 2px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.social{
+    border-bottom: solid rgb(114, 19, 19) 2px;
+}
+
+
+body > article {
+    justify-content: center;
+    display: flex;
+}
+
+article {
+    padding: 0 20px;
+}
+
+/*Instagram*/
+.instagram_border{
+    background-color: rgb(73, 73, 73);
+    padding: 20px 0;
+    text-align: center;
+    width: 300px;
+    border: 2px solid;
+    border-image: linear-gradient(to right, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5) 1;
+    position: relative;
+}
+
+article .instagram_border img {
+    border-radius: 100px;
+}
+
+body > article #ig-transition :hover{
+    background:linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
+    border: solid #414042 2px;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+/*Facebook*/
+.facebook_border{
+    
+    background-color: rgb(73, 73, 73);
+    padding: 20px 0;
+    text-align: center;
+    width: 300px;
+    border: solid 2px #1094f4;
+}
+
+article .facebook_border img {
+    border-radius: 100px;
+}
+
+body > article #f-transition :hover {
+    background-color: #1094f4;
+    border: solid #414042 2px;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+/*Snapchat*/
+.snapchat_border{
+    background-color: rgb(73, 73, 73);
+    padding: 20px 0;
+    text-align: center;
+    width: 300px;
+    border: solid 2px #ffff00;
+}
+
+article .snapchat_border img {
+    border-radius: 100px;
+}
+
+body > article #s-transition :hover {
+    background-color: #ffff00;
+    border: solid #414042 2px;
+    border-radius: 20px;
+    transition: 0.5s;
+    color: #414042;
+}
+
+/*TikTok*/
+.tiktok-border {
+    background-color: rgb(73, 73, 73);
+    padding: 20px 0;
+    text-align: center;
+    width: 300px;
+    border: solid 2px black;
+}
+
+article .tiktok-border img {
+    border-radius: 100px;
+}
+
+body > article #t-transition :hover {
+    background-color: black;
+    border: solid #414042 2px;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+/*Spotify*/
+.spotify-border {
+    background-color: rgb(73, 73, 73);
+    padding: 20px 0;
+    text-align: center;
+    width: 300px;
+    border: solid 2px #1ed760;
+}
+
+article .spotify-border img {
+    border-radius: 100px;
+}
+
+body > article #sp-transition :hover {
+    background-color: #1ed760;
+    border: solid #414042 2px;
+    border-radius: 20px;
+    transition: 0.5s;
+    color: #414042;
+}
+
+/*Heavy*/
+.heavy-border {
+    margin-top: 20px;
+    background-color: rgb(73, 73, 73);
+    padding: 20px 0;
+    text-align: center;
+    width: 300px;
+    border: solid 2px #000000;
+}
+
+article .heavy-border img {
+    border-radius: 100px;
+}
+
+body > article #h-transition :hover {
+    background-color: #000000;
+    border: solid #414042 2px;
+    border-radius: 20px;
+    transition: 0.5s;
+    color: #ffffff;
+}
+
+
+.nadpis{
+    text-transform: uppercase;
+}
+
+footer{
+    margin: 100px 0 0 0;
+}
+

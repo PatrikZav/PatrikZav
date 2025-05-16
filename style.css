@@ -1,0 +1,614 @@
+/* Definice animace fadeIn */
+@keyframes fadeIn {
+    0% {
+      opacity: 0; /* Na začátku je text neviditelný */
+      transform: translateY(20px); /* Text je mírně posunutý */
+    }
+    100% {
+      opacity: 1; /* Text je zcela viditelný */
+      transform: translateY(0); /* Text se posune zpět na původní pozici */
+    }
+  }
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background-color: black;
+    font-family: Inter;
+    color: #ebebeb;
+}
+
+h1, h2, h3, h4, p, ul, ol, li, body {
+    margin:0;
+    padding:0;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: Playfair;
+    color: #ebebeb;
+}
+
+a{
+    text-decoration: none;
+    color: #ebebeb;
+}
+
+.container{
+    width: 1 100px;
+    margin: auto;
+}
+
+
+/*----------Header----------*/
+header{
+    background: url("../personal_page2/photo/personal_page-Photoroom.jpg") center center no-repeat;
+    background-size: cover;
+    box-shadow: inset -1px -84px 61px 17px black;
+    height: 900px;
+    position: relative;
+}
+
+.headerMenu{
+    display: flex;
+    justify-content: center;
+    animation: fadeIn 1.5s forwards;/*animace*/
+}
+
+header .headerMenu .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headerMenu .container .menu a{
+    text-decoration: none;
+    display: block;
+    color: #ebebeb;
+    margin: 30px 70px;
+    font-size: 15px;
+}
+
+.headerMenu .container .menu .menuUl li .mainName{
+    margin:  0 90px;
+    font-family: Playfair;
+    font-size: 35px;
+}
+
+.menu .menuUl li {
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.headerMenu .container .menu .menuUl li:hover{
+    transition: 0.5s;
+    transform: translateY(-5px);
+}
+
+.headerName{
+    animation: fadeIn 1.5s forwards;
+    padding: 240px 0 400px;
+}
+
+.headerName p{
+    text-align: center;
+    font-size: clamp(16px, 10vw, 150px);
+    font-family:Playfair;
+    text-transform: uppercase;
+    mix-blend-mode: difference;
+    letter-spacing: 18px;
+}
+
+
+/*skrytí menu*/
+.menu-toggle {
+    display: none; /* Skryjeme na PC */
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}  
+
+/* Přidání třídy pro zobrazení menu */
+.menu.show {
+    display: flex;
+}
+
+/*----------šipka v headeru----------*/
+@keyframes fadeArrow {
+    0% { opacity: 1; }
+    50% { opacity: 0.3; } /* Šipka skoro zmizí */
+    100% { opacity: 1; }
+}
+
+.arrowDown{
+    position: absolute; /* Umožní pevné umístění vůči rodiči */
+    bottom: 20px; /* Pevná vzdálenost od spodního okraje headeru */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 33px;
+    height: auto;
+    cursor: pointer;
+    z-index: 10; /* Aby byla nad ostatními prvky */
+    animation: fadeArrow 1.5s infinite ease-in-out; /* Plynulá animace */
+}
+
+
+/*----------Projects----------*/
+.sectionProjects1{
+    height: 100px;
+}
+
+.sectionProjects1 h1{
+    text-transform: uppercase;
+    font-family: Playfair;
+    font-size: 50px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 30px;
+}
+
+.sectionProjects1Img{
+    height: auto;
+    margin-bottom: 10vh;
+}
+
+.sectionProjects1Img img{
+    width: 60vh;
+    margin: 0 30px;
+    border-radius: 30px;
+}
+
+
+/*----------About, Early Life----------*/
+.section1-2{
+    border-radius: 20px;
+    height: 450px;
+    position:sticky;
+    margin: 0 100px;
+    background-color: rgb(20, 20, 20);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+.Text1-2{
+    flex: 1;
+    padding: 20px;
+    padding-left: 100px;
+    max-width: 50%;
+}
+
+.section1-2 .Text1-2 h1{
+    font-size: 44.8px;
+    margin-bottom: 20px;
+}
+
+.section1-2 .Text1-2 p{
+    font-size: 15.36px;
+}
+
+.Images1-2{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    max-width: 50%;
+    flex-direction: column;
+}
+
+.section1-2 img{
+    width: 400px;
+    border-radius: 30px;
+    position: absolute;
+}
+
+.Img1_1-2{
+    transform: rotate(-10deg) translateX(-40px);
+    z-index: 1;
+}
+
+.Img2_1-2{
+    transform: rotate(10deg) translateX(160px) translateY(-25px);
+    z-index: 2;
+}
+
+.section1-2:hover{
+    .Img1_1-2{
+        transform: rotate(-10deg) translateX(-150px) translateY(-26px);
+        transition: 0.6s;
+    }
+
+    .Img2_1-2{
+        transform: rotate(10deg) translateX(100px) translateY(-17px);
+        transition: 0.6s;
+    }
+}
+
+/*----------White Line----------*/
+.whiteLine{
+    background-color: #fff;
+    width: 1px;
+    height: 20vh;
+    position: relative;
+    margin:auto;
+}
+
+/*----------Projects2----------*/
+.sectionProjects2 h1{
+    font-size: 72px;
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.grayPole {
+    border-radius: 20px;
+    height: auto; /* Automatická výška podle obsahu */
+    position: sticky;
+    margin: 0 100px;
+    background-color: rgb(20, 20, 20);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 60px;
+    flex-wrap: wrap; /* Povolení zalamování obsahu */
+    padding: 20px; /* Přidání paddingu pro lepší vzhled */
+}
+
+.grayPoleText {
+    flex: 1; /* Automatické roztažení podle obsahu */
+    padding: 20px;
+    padding-left: 100px;
+    max-width: 50%;
+    min-height: auto; /* Zajištění správného roztahování */
+    word-wrap: break-word; /* Zalomení dlouhého textu */
+}
+
+.grayPoleText h1{
+    font-size: 44.8px;
+}
+
+.grayPoleImg {
+    flex: 1; /* Aby obrázek zabíral prostor stejně jako text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 50%;
+}
+
+.grayPoleImg img {
+    width: 600px;
+    border-radius: 20px;
+}
+
+.YT-videos{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.YT-videos iframe{
+    margin: 0 50px;
+    border-radius: 20px;
+}
+
+/*----------Contact----------*/
+.Contact h1{
+    font-size: 72px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 100px;
+}
+
+.contactIcons{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 70px;
+}
+
+.contactIcons img{
+    margin: 30px 7px;
+    border-radius: 5px;
+}
+
+/*Contact formular*/
+.contact-container{
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.contact-img{
+    width: 100vh;
+    z-index: 1;
+    position: absolute;
+    clip-path: inset(0 20%);
+    filter: brightness(50%);
+}
+
+.contact-left{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+    z-index: 2;
+}
+
+.contact-inputs{
+    width: 400px;
+    height: 50px;
+    border: none;
+    border-bottom: 2px solid gray;
+    padding-left: 25px;
+    font-weight: 500;
+    color: rgb(255, 255, 255)   ;
+    background: rgba(66, 66, 66, 0);
+
+}
+
+.contact-left textarea{
+    height: 100px;
+    padding-top: 15px;
+}
+
+.contact-inputs:focus{
+    border: 2px solid #616161;
+}
+
+.contact-inputs::placeholder{
+    color: #a9a9a9;
+}
+
+.contact-left button{
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    font-size: 16px;
+    color: #fff;
+    gap: 10px;
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient(270deg, #272727,#585858);
+    cursor: pointer;
+}
+
+.contact-left button:hover{
+    background: linear-gradient(100deg, #272727,#585858);
+    padding: 20px 35px;
+    transition: 0.5s;
+}
+
+.contact-left button img{
+    height: 15px;
+}
+
+/*----------Footer----------*/
+footer{
+    border-top: 1px solid #ebebeb;
+    margin: 0 20px;
+}
+
+.footer-container{
+    display: flex;
+    justify-content: space-between; /* Levá část vlevo, pravá vpravo */
+    align-items: center; /* Zarovnání do stejné výšky */
+}
+
+.footer-text{
+    margin: 30px 0 45px 50px;
+}
+
+.footer-name{
+    font-family: Playfair;
+    font-size: 25px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.footer-right{
+    margin:0 10vh 2vh 0;
+}
+
+.footer-right a{
+    margin: 0 10px;
+    font-family: Playfair;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.instagramFooter:hover{
+    transition: 1s;
+    border-bottom: 1px solid #e4405f;
+}
+
+.youtubeFooter:hover{
+    transition: 1s;
+    border-bottom: 1px solid #cd201f;
+}
+
+.facebookFooter:hover{
+
+    transition: 1s;
+    border-bottom: 1px solid #3b5999;
+}
+
+/* 📱 Na mobilu, když se menu zobrazí, skryjeme .headerName */
+
+@media (max-width: 1400px) {
+    .section1-2{
+        height: auto;
+    }
+
+    .Images1-2 img{
+        width: 80%;
+        height: auto;
+    }
+
+    .grayPoleImg a img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Video */
+    .YT-videos {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    iframe {
+        width: 100% !important;
+        height: 30vh !important;
+    }
+}
+
+
+/* Improved Mobile Optimization */
+@media (max-width: 1024px) {
+
+    /*--------------------Menu--------------------*/
+    .menu {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 1000; /* Menu je nad vším ostatním */
+    }
+
+    .menuUl{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .headerName {
+        display: block;
+    }
+
+    /* Skrytí headerName při zobrazeném menu */
+    .menu.show + .headerName {
+        display: none !important;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 30px;
+        z-index: 9001; /* Nad menu */
+    }
+
+    /*--------------------Main Sections--------------------*/
+    body, html {
+        margin: 0;
+        padding: 0;
+        width: auto;
+        
+    }
+
+    /* Projects */
+    .sectionProjects1Img {
+        height: auto;
+    }
+
+    .sectionProjects1Img img {
+        margin: 3vh 0;
+        width: 100%;
+    }
+
+    /* About */
+    #sekce1 {
+        margin-bottom: 2vh;
+    }
+
+    /* Container adjustments */
+    .container, .section1-2, .grayPole {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin: 0 auto !important;
+        display: flex !important;
+        flex-direction: column !important; /* stack elements vertically */
+        align-items: center !important;
+        height: auto !important; /* let height grow naturally */
+    }
+
+    /* Text blocks */
+    .Text1-2, .grayPoleText {
+        width: 100% !important;
+        max-width: 95vw !important;
+        font-size: 1.1rem;
+        text-align: center;
+        margin-bottom: 15px;
+        padding: 10px 0;
+    }
+
+    /* Images container */
+    .Images1-2, .grayPoleImg {
+        width: 100% !important;
+        max-width: 95vw !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        margin-bottom: 20px;
+    }
+
+    .grayPoleImg img {
+        width: 100% !important;
+        height: auto !important;
+        max-width: 90vw !important; /* Adjust max width for images */
+    }
+
+    /* Remove any absolute positioning */
+    .Img1_1-2, .Img2_1-2 {
+        position: static !important;
+        transform: none !important;
+        width: 80% !important;
+    }
+
+    /* Video */
+    .YT-videos {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    iframe {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    /* Gray pole section */
+    .grayPole {
+        margin: 2vh 0 !important;
+    }
+
+    .contact-container .contact-img{
+        display: none;
+    }
+
+    .contact-container{
+        height: 60vh;
+    }
+
+    .contact-left .contact-inputs{
+        width: 100%;
+    }
+    
+}

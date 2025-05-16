@@ -1,0 +1,36 @@
+body{
+    font-family: poppins;
+    color: white;
+    background: rgb(180, 180, 180);
+}
+
+header{
+    
+    margin: -10px -10px 0 -10px;
+    background: rgb(73, 73, 73);
+    display: flex;
+    justify-content: space-evenly;
+}
+
+header nav ul {
+    list-style-type: none; /* Odebere tečky z odstavce*/
+    display: flex; /* D8 text vedle sebe*/
+}
+
+header nav li {
+    margin: 10px 20px 0 20px;
+    font-size: 20px;
+}
+
+header nav li :hover {
+    border-bottom: solid white 2px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.kontakt{
+    border-bottom: solid rgb(114, 19, 19) 2px;
+}

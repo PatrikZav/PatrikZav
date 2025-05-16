@@ -1,0 +1,93 @@
+body{
+    font-family: poppins;
+    color: white;
+    background: rgb(180, 180, 180);
+}
+
+header{
+    
+    margin: -10px -10px 0 -10px;
+    background: rgb(73, 73, 73);
+    display: flex;
+    justify-content: space-evenly;
+}
+
+header nav ul {
+    list-style-type: none; /* Odebere tečky z odstavce*/
+    display: flex; /* D8 text vedle sebe*/
+}
+
+header nav li {
+    margin: 10px 20px 0 20px;
+    font-size: 20px;
+}
+
+header nav li :hover {
+    border-bottom: solid white 2px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.uvod{
+    border-bottom: solid rgb(114, 19, 19) 2px;
+}
+
+body > article{
+    
+    font-family: Poppins;
+    color: white;
+    display: flex; /* Použití Flexboxu */
+    justify-content: center; /* Horizontální zarovnání */
+    align-items: center; /* Vertikální zarovnání */
+    padding: 200px 0 200px 0;
+    background-image: url(obrazky/bmw-ac-schnitzer-8-series-uhd-4k-wallpaper.jpg);
+    margin: -10px;
+}
+
+.profile{
+    border-radius: 60px;
+    text-align: center;
+    background: rgb(73, 73, 73);
+    width: 400px;
+    height: 450px;
+    font-size: 17px;
+}
+
+.me_picture{
+    border-radius: 100px;
+    margin: 10px;
+}
+
+.HTML {
+
+    background: orange;
+    padding: 5px;
+    margin: 5px;
+}
+
+.CSS {
+    background: rgb(37, 33, 248);
+    padding: 5px;
+    margin: 5px;
+}
+
+.instagram_img {
+    padding-right: 10px;
+    
+}
+ 
+#instagram{
+    margin: 0 84px;
+    padding: 0.5px 0 0.5px 0;
+    border-radius: 100px;
+    background:linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4); /* Přechod barev */
+    font-size: 20px;
+}
+
+footer {
+    margin: 10px 0;
+}
+
