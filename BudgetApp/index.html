@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget app</title>
+
+    <link rel="shortcut icon" href="images/Arrow.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+
+</head>
+<body>
+    <div class="horniBar">
+        <h2>Dashboard</h2>
+    </div>
+
+    <!-- Menu -->
+    <div class="menu">
+        <ul>
+            <a href="index.html">
+                <li class="active">
+                    <img src="images/Arrow.png" alt="Arrow">
+                    <p class="menuText">Dashboard</p>
+                    
+                </li>
+            </a>
+        </ul>
+
+        <button class="storageReset" onclick="deleteLocalStorage()">Delete Memory</button>
+        <button class="darkTheme" id="toggleTheme"></button>
+    </div>
+
+    <!-- Dashboard -->
+    <div class="dashboard">
+        <div class="top-row">
+
+            
+
+            <!-- Monthly Spending -->
+            <div class="monthlySpending">
+                <div class="headLine">
+                    <h3>Spending</h3>
+                    <img src="images/arrow2.png" alt="Arrow">
+                </div>
+                <div class="stats-content">
+
+                    <div class="totalSpends" id="totalSpends"></div>
+
+                </div>
+
+            </div>
+
+            <!-- Categories------------------------------------------------------------------ -->
+            <div class="categories">
+                <div class="headLine">
+                    <h3>Categories</h3>
+                    <img src="images/arrow2.png" alt="Arrow">
+                </div>
+            
+                <div class="categories-content" id="category-content">
+                    
+
+                </div>
+
+            </div>
+
+        </div>
+        
+        <div class="bottom-row">
+
+            <!-- Transactions -->
+            <div class="transactions">
+                <div class="headLine">
+                    <h3>Transactions</h3>
+                    <img src="images/arrow2.png" alt="Arrow">
+                </div>
+
+                <div class="transactions-content">
+                    <div class="transaction-labels">
+                        <div class="label-left">
+                            <span>Day</span>
+                            <span>Name</span>
+                        </div>
+                        <div class="label-right">
+                            <span>Category</span>
+                            <span>Spent</span>
+                        </div>
+                    </div>
+
+                    <div class="add-form" id="addForm">
+                        <input type="date" id="dateInput" placeholder="Date">
+                        <input type="text" id="nameInput" placeholder="Name">
+                        <select name="categories" id="categoriesInput">
+                            <option value="">Select category</option>
+                        </select>
+                        <input type="number" id="priceInput" placeholder="Price" step="0.01">
+                        <button class="save-button" onclick="addTransaction()">Save</button>
+                        <button class="cancel-button" onclick="toggleForm()">Cancel</button>
+                    </div>
+
+                    <div id="transactionsList"></div>
+                </div>
+
+
+                <button class="add-transaction-btn" onclick="toggleForm()">
+                    <span style="font-size: 27px;">+</span> Add transaction
+                </button>
+                
+            </div>
+
+        </div>
+        
+    </div>
+
+</body>
+</html>
