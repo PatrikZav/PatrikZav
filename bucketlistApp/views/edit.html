@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="/style.css">
+    </head>
+<body>
+    <div class="backgroundCircle"></div>
+    <div class="editPage">
+        <h1>Edit Goal</h1>
+        <form id="editForm">
+            <input type="text" id="name" required>
+            <textarea id="description" placeholder="Description..."></textarea>
+            <div class="selects">
+                <select id="category">
+                    <option value="Travel">Travel</option>
+                    <option value="Sport">Sport</option>
+                    <option value="Education">Education</option>
+                    <option value="Career">Career</option>
+                    <option value="Health">Health</option>
+                    <option value="Hobby">Hobby</option>
+                    <option value="Adrenaline">Adrenaline</option>
+                </select>
+
+                <select id="status">
+                    <option value="In Progress">In Progress</option>
+                    <option value="Done">Done</option>
+                </select>
+            </div>
+
+            <div class="editButtons">
+                <button type="submit" class="submitEditButton">Update</button>
+                <button type="button" onclick="location.href='/'" class="cancelEditButton">Cancel</button>
+            </div>
+            
+        </form>
+    </div>
+    
+
+    <script>
+        const id = new URLSearchParams(window.location.search).get('id');
+        async function load() {
+            const res = await fetch(`/api/goal?id=${id}`);
+            const g = await res.json();
+            document.getElementById('name').value = g.name;
+            document.getElementById('description').value = g.description || '';
+            document.getElementById('category').value = g.category;
+            document.getElementById('status').value = g.status;
+        }
+        document.getElementById('editForm').onsubmit = async (e) => {
+            e.preventDefault();
+            await fetch('/api/goals', {
+                method: 'PUT',
+                body: JSON.stringify({
+                    id,
+                    name: document.getElementById('name').value,
+                    description: document.getElementById('description').value,
+                    category: document.getElementById('category').value,
+                    status: document.getElementById('status').value
+                })
+            });
+            location.href = '/';
+        };
+        load();
+    </script>
+</body>
+</html>
