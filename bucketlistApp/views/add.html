@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="/style.css">
+    </head>
+<body>
+    <div class="backgroundCircle"></div>
+    <div class="addPage">
+        <h1>Add New Goal</h1>
+        <form id="goalForm">
+            <input type="text" id="name" placeholder="Goal Name" required>
+            <textarea id="description" placeholder="Description..."></textarea>
+            
+            <div class="selects">
+                <select id="category">
+                    <option value="Travel">Travel</option>
+                    <option value="Sport">Sport</option>
+                    <option value="Education">Education</option>
+                    <option value="Career">Career</option>
+                    <option value="Health">Health</option>
+                    <option value="Hobby">Hobby</option>
+                    <option value="Adrenaline">Adrenaline</option>
+                </select>
+                
+                <select id="status">
+                    <option value="In Progress">In Progress</option>
+                    <option value="Done">Done</option>
+                </select>
+            </div>
+            
+            <div class="addButtons">
+                <button type="submit" class="submitAddButton">Save Goal</button>
+                <button type="button" onclick="location.href='/'" class="cancelAddButton">Cancel</button>
+            </div>
+        </form>
+    </div>
+    
+
+    <script>
+        document.getElementById('goalForm').onsubmit = async (e) => {
+            e.preventDefault();
+            const data = {
+                name: document.getElementById('name').value,
+                description: document.getElementById('description').value,
+                category: document.getElementById('category').value,
+                status: document.getElementById('status').value
+            };
+            await fetch('/api/goals', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
+            });
+            location.href = '/';
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,376 @@
+/* General Layout */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0A0A0F;
+    color: #ffffff;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 { color: #ffffff;}
+
+.backgroundCircle{
+    position: fixed;
+    width: 100%;
+    height: 30%;
+    border-radius: 50%;
+    background: rgba(153, 0, 255, 0.11);
+    filter: blur(100px);
+    z-index: -1;
+    pointer-events: none;
+}
+
+/*-------------------------------------------------------------
+index.html
+-------------------------------------------------------------*/
+/* Filter Section */
+.filter-section{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 100px;
+}
+
+.menuBox{
+    background-color: rgba(142, 142, 142, 0.4);
+    padding: 20px;
+    border-radius: 20px;
+    border: 2px solid #8E8E8E;
+    height: 90px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+input, select, textarea{
+    padding: 10px;
+    background-color: rgba(142, 142, 142, 0.4);
+    color: #8E8E8E;
+    border-radius: 15px;
+}
+
+/* Search Box */
+.searchIcon{
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    background-color: rgba(22, 59, 47, 0.5);
+    border: 2px solid #163b2f;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.searchInput{
+    width: 15vw;
+    height: 45px;
+    border: 2px solid #163b2f;
+    color: aliceblue;
+    font-size: 20px;
+}
+
+.searchInput::placeholder {
+    color: aliceblue;
+}
+
+/*Category & Status Box*/
+.filterIcon{
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    background-color: rgba(27, 43, 74,0.4);
+    border: 2px solid #1B2B4A;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.categoryFilter, .statusFilter{
+    width: 13vw;
+    height: 7vh;
+    border: 2px solid #1B2B4A;
+    font-size: 18px;
+    color: aliceblue;
+}
+
+.categoryFilter option, 
+.statusFilter option {
+    background-color: #1B1B2F;
+    color: aliceblue;
+}
+
+/* Add Button */
+.addButton {
+    background-color: #8954F3;
+    color: white;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 2px 8px #8954F3;
+    font-size: 14px;
+    border-radius: 15px;
+    width: 150px;
+    font-size: 24px;
+}
+
+.addButton svg {
+    margin-right: 50px;
+}
+
+.buttonAddGoalText {
+    margin: 0;
+    
+}
+
+
+/* Grid & Cards */
+.goals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.goal-card {
+    background: white;
+    color: #1E1E1E;
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    cursor: pointer;
+}
+
+.goal-card-UpperInfo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffffff;
+}
+
+.goal-card-UpperInfo p, 
+.goal-card-UpperInfo span {
+    background-color: rgba(130, 2, 215,0.4);
+    border-radius: 20px;
+    border: 2px solid #8202D7;
+    padding: 5px 12px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+/*-------------------------------------------------------------
+detail.html
+-------------------------------------------------------------*/
+#goalDetail {
+    max-width: 40%;
+    margin: 0 auto;
+}
+
+/* Goal Detail Header */
+.goal-detail-header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    height: 30vh;
+    border-radius: 30px;
+    border: 1px solid #8954F3;
+}
+
+.goal-detail-header h2 {
+    font-size: 36px;
+    padding-top: 30px;
+}
+
+/* Goal Detail Info Section */
+.goal-detail-info {
+    display: flex;
+    justify-content: space-between;
+    max-width: 60%;
+    margin-bottom: 30px;
+    color: #898989;
+    margin-left: 20px;
+}
+
+.goal-detail-info p {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Goal Detail Description Section */
+.goal-detail-description {
+    background-color: #D9D9D9;
+    color: #141414;
+    padding: 20px 40px;
+    border-radius: 20px;
+    margin: 0 auto;
+    font-weight: 400;
+    font-size: 17px;
+}
+
+.goal-detail-description h2 {
+    margin-bottom: 0;
+    font-weight: 500;
+    font-size: 28px;
+}
+
+/* Detail Buttons */
+.detailButtonContainer{
+    display: flex;
+    justify-content: space-between;
+    max-width: 30%;
+    margin: 80px auto;
+    gap: 20px;
+}
+
+.detailButtonContainer button {
+    color: white;
+    cursor: pointer;
+    border-radius: 15px;
+    width: 160px;
+    height: auto;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.detailButtonContainer button svg {
+    margin: 10px 0 0 0;
+    display: block;
+}
+
+.detailButtonContainer button p {
+    margin-top: 5px;
+}
+
+.editButton {
+    background-color: rgba(137, 84, 243, 0.6);
+    box-shadow: 0 2px 40px #8954F3;
+    border: 1px solid #8954F3;
+}
+.detailButtonContainer .editButton svg {
+    margin-left: 30px;
+}
+
+.deleteButton {
+    background-color: rgba(255, 34, 34, 0.6);
+    box-shadow: 0 2px 40px #ff2222;
+    border: 1px solid #ff2222;
+}
+.detailButtonContainer .deleteButton svg {
+    margin-left: 15px;
+}
+
+.backButton {
+    background-color: rgba(164, 164, 164, 0.6);
+    box-shadow: 0 2px 40px #A4A4A4;
+    border: 1px solid #A4A4A4;
+}
+.detailButtonContainer .backButton svg {
+    margin-left: 20px;
+}
+
+/*-------------------------------------------------------------
+edit.html, add.html
+-------------------------------------------------------------*/
+.editPage,
+.addPage {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#editForm,
+#goalForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: rgba(142, 142, 142, 0.4);
+    padding: 40px;
+    border-radius: 30px;
+    border: 2px solid #8E8E8E;
+}
+
+/* Edit Form Name*/
+#name{
+    width: 40vw;
+    height: 30px;
+    font-size: 20px;
+    border: 1px solid #8954F3;
+    color: aliceblue;
+    margin-bottom: 30px;
+}
+
+/* Edit Form Description */
+#description{
+    width: 40vw;
+    height: 200px;
+    font-size: 15px;
+    border: 1px solid #8954F3;
+    color: aliceblue;
+}
+
+/* Edit Form Category & Status */
+.selects{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+#category, #status{
+    width: 20vw;
+    height: 50px;
+    font-size: 18px;
+    color: aliceblue;
+    border: 1px solid #8954F3;
+}
+
+#category option, 
+#status option {
+    background-color: #1B1B2F;
+    color: aliceblue;
+}
+
+/* Edit Form Buttons */
+.editButtons,
+.addButtons {
+    display: flex;
+    justify-content: space-between;
+    max-width: 50%;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.editButtons button,
+.addButtons button {
+    color: white;
+    cursor: pointer;
+    border-radius: 15px;
+    width: 150px;
+    height: 80px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.editButtons .submitEditButton,
+.addButtons .submitAddButton {
+    background-color: rgba(76, 255, 52, 0.5);
+    box-shadow: 0 2px 40px #4CFF34;
+    border: 1px solid #4CFF34;
+}
+
+.editButtons .cancelEditButton,
+.addButtons .cancelAddButton {
+    background-color: rgba(255, 34, 34, 0.5);
+    box-shadow: 0 2px 40px #ff2222;
+    border: 1px solid #ff2222;
+}

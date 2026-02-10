@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bucket List</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <div class="backgroundCircle"></div>
+    <h1>My Bucket List</h1>
+    <div class="filter-section">
+        <div class="menuBox">
+            <div class="searchIcon">
+                <svg width="50" height="50" viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M24.2917 13.25C30.3898 13.25 35.3333 18.1935 35.3333 24.2917M36.7882 36.7796L46.375 46.375M41.9583 24.2917C41.9583 34.0487 34.0487 41.9583 24.2917 41.9583C14.5346 41.9583 6.625 34.0487 6.625 24.2917C6.625 14.5346 14.5346 6.625 24.2917 6.625C34.0487 6.625 41.9583 14.5346 41.9583 24.2917Z" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <input type="text" id="searchInput" class="searchInput" placeholder="Search..." oninput="load()">
+        </div>
+        
+        <div class="menuBox">
+            <div class="filterIcon">
+                <svg width="50" height="50" viewBox="0 0 59 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_1_66)">
+                        <path d="M29.3828 57.5C44.2581 57.5 56.3169 45.1878 56.3169 30C56.3169 14.8122 44.2581 2.5 29.3828 2.5C14.5074 2.5 2.44861 14.8122 2.44861 30C2.44861 45.1878 14.5074 57.5 29.3828 57.5Z" stroke="#4F86FF" stroke-width="4"/>
+                        <path d="M29.3827 47.5C38.8488 47.5 46.5226 39.665 46.5226 30C46.5226 20.335 38.8488 12.5 29.3827 12.5C19.9166 12.5 12.2428 20.335 12.2428 30C12.2428 39.665 19.9166 47.5 29.3827 47.5Z" stroke="#4F86FF" stroke-width="3"/>
+                        <path d="M29.3827 38.75C34.1158 38.75 37.9527 34.8325 37.9527 30C37.9527 25.1675 34.1158 21.25 29.3827 21.25C24.6496 21.25 20.8127 25.1675 20.8127 30C20.8127 34.8325 24.6496 38.75 29.3827 38.75Z" stroke="#4F86FF" stroke-width="2"/>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_1_66">
+                            <rect width="58.7654" height="60" fill="white"/>
+                        </clipPath>
+                    </defs>
+                </svg>
+
+            </div>
+            <select id="categoryFilter" class="categoryFilter" onchange="load()">
+                <option value="">All Categories</option>
+                <option value="Travel">Travel</option>
+                <option value="Sport">Sport</option>
+                <option value="Education">Education</option>
+                <option value="Career">Career</option>
+                <option value="Health">Health</option>
+                <option value="Hobby">Hobby</option>
+                <option value="Adrenaline">Adrenaline</option>
+            </select>
+
+            <select id="statusFilter" class="statusFilter" onchange="load()">
+                <option value="">All Statuses</option>
+                <option value="In Progress">In Progress</option>
+                <option value="Done">Done</option>
+            </select>
+        </div>
+        
+        <button onclick="location.href='/add'" class="addButton">
+            <svg width="50" height="50" viewBox="0 0 75 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M46.875 28.125L39.0625 35.9375M46.875 28.125V18.75L56.25 9.375V18.75H65.625L56.25 28.125H46.875Z" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M38.5313 9.375H37.5C31.9374 9.375 26.4997 11.0245 21.8746 14.1149C17.2495 17.2053 13.6446 21.5979 11.5159 26.737C9.38719 31.8762 8.83022 37.5312 9.91543 42.9869C11.0006 48.4426 13.6793 53.454 17.6126 57.3874C21.546 61.3207 26.5574 63.9994 32.0131 65.0846C37.4688 66.1698 43.1238 65.6128 48.263 63.4841C53.4022 61.3554 57.7947 57.7505 60.8851 53.1254C63.9755 48.5003 65.625 43.0626 65.625 37.5C65.625 37.1562 65.625 36.8125 65.625 36.4687" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M52.8125 40.625C52.2473 43.3903 50.9436 45.9509 49.0398 48.0348C47.1361 50.1186 44.7034 51.6479 42.0003 52.4601C39.2972 53.2723 36.4245 53.3371 33.6875 52.6477C30.9505 51.9583 28.4513 50.5404 26.4555 48.5445C24.4597 46.5487 23.0417 44.0495 22.3523 41.3125C21.6629 38.5755 21.7277 35.7028 22.5399 32.9997C23.3521 30.2966 24.8814 27.8639 26.9652 25.9602C29.0491 24.0565 31.6097 22.7527 34.375 22.1875" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <p class="buttonAddGoalText">Add Goal</p>
+        </button>
+    </div>
+
+    <div id="goalsContainer" class="goals-grid"></div>
+
+    <script>
+        async function load() {
+            const s = document.getElementById('searchInput').value;
+            const c = document.getElementById('categoryFilter').value;
+            const st = document.getElementById('statusFilter').value;
+
+            const res = await fetch(`/api/goals?search=${s}&category=${c}&status=${st}`);
+            const data = await res.json();
+            
+            document.getElementById('goalsContainer').innerHTML = data.map(g => `
+                <div class="goal-card" onclick="location.href='/detail?id=${g.id}'">
+                    <div class="goal-card-UpperInfo">
+                        <p>📂 ${g.category}</p>
+                        <span class="status-badge">${g.status}</span>
+                    </div>
+                    <h3>${g.name}</h3>
+                    <p>📅 ${g.createdAt}</p>
+                </div>
+            `).join('');
+        }
+        load();
+    </script>
+</body>
+</html>

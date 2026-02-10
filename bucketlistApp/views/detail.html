@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="/style.css">
+    </head>
+<body>
+    <div class="backgroundCircle"></div>
+    <div id="goalDetail"></div>
+    
+    <div class="detailButtonContainer">
+        <button id="editButton" class="editButton">
+            <svg width="30" height="30" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M40.7865 12.2668L22.5015 30.5517C20.6806 32.3725 15.2756 33.2159 14.0681 32.0084C12.8606 30.8009 13.6848 25.3959 15.5056 23.575L33.8098 5.27089C34.2612 4.77843 34.8076 4.38256 35.4164 4.10713C36.0249 3.83171 36.6831 3.6824 37.351 3.66833C38.0188 3.65428 38.6827 3.77568 39.3024 4.02525C39.9221 4.27482 40.4848 4.64742 40.9565 5.12045C41.4282 5.59349 41.7992 6.15718 42.0471 6.77753C42.2949 7.3979 42.4147 8.06202 42.3988 8.72988C42.3829 9.39774 42.2316 10.0555 41.9547 10.6634C41.6775 11.2713 41.2802 11.8167 40.7865 12.2668Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M21.0834 7.66663H11.5C9.46671 7.66663 7.51679 8.47435 6.079 9.91213C4.64123 11.3499 3.83337 13.3 3.83337 15.3333V34.5C3.83337 36.5334 4.64123 38.4834 6.079 39.9211C7.51679 41.3589 9.46671 42.1666 11.5 42.1666H32.5834C36.8192 42.1666 38.3334 38.7166 38.3334 34.5V24.9166" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <p>Edit Goal</p>
+        </button>
+
+        <button onclick="location.href='/'" class="backButton">
+            <svg fill="#ffffff" height="30px" width="30px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 511.999 511.999" xml:space="preserve" stroke="#ffffff">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier"> 
+                    <path d="M210.188,91.3c0-10.221-8.286-18.507-18.507-18.507h-60.633c-10.221,0-18.507,8.286-18.507,18.507 s8.286,18.507,18.507,18.507h60.633C201.902,109.807,210.188,101.521,210.188,91.3z"></path> 
+                    <path d="M93.923,298.809L12.359,345.9c-16.493,9.522-16.463,33.364,0,42.869l81.565,47.091 c16.492,9.522,37.125-2.423,37.125-21.434v-94.183C131.049,301.2,110.388,289.302,93.923,298.809z"></path> 
+                    <path d="M353.754,72.795h-79.701c-10.518,0-18.987,8.773-18.486,19.401c0.469,9.954,9.044,17.612,19.009,17.612h80.9 c66.292,0,120.149,54.253,119.505,120.689c-0.638,65.792-55.232,118.331-121.028,118.331h-185.89 c-6.814,0-12.338,5.524-12.338,12.339v12.338c0,6.814,5.524,12.338,12.338,12.338h187.414 c86.612,0,157.019-70.713,156.52-157.438C511.5,142.034,440.125,72.795,353.754,72.795z"></path> 
+                </g>
+            </svg>
+            <p>Return Back</p>
+        </button>
+
+        <button id="deleteButton" class="deleteButton">
+            <svg width="35" height="35" viewBox="0 0 48 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 9.79167C18 7.62855 19.7909 5.875 22 5.875H26C28.2092 5.875 30 7.62855 30 9.79167V13.7083H18V9.79167Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M18 9.79163H14C11.7909 9.79163 10 11.5452 10 13.7083V37.2083C10 39.3715 11.7909 41.125 14 41.125H20M30 9.79163H34C36.2092 9.79163 38 11.5452 38 13.7083V23.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M28 31.3334L33 36.2292M33 36.2292L38 41.125M33 36.2292L38 31.3334M33 36.2292L28 41.125" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <p>Delete Goal</p>
+        </button>
+    </div>
+    
+
+    <script>
+        const id = new URLSearchParams(window.location.search).get('id');
+        async function load() {
+            const res = await fetch(`/api/goal?id=${id}`);
+            const g = await res.json();
+            
+            document.getElementById('goalDetail').innerHTML = `
+                <div class="goal-detail-header">
+                    <h2>${g.name}</h2>
+                </div>
+
+                <div class="goal-detail-info">
+                    <p>
+                        <svg width="30" height="30" viewBox="0 0 38 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M31.6667 14.5833V10.2083C31.6667 8.5975 30.249 7.29167 28.5 7.29167H9.50004C7.75114 7.29167 6.33337 8.5975 6.33337 10.2083V14.5833M31.6667 14.5833V27.7083C31.6667 29.3192 30.249 30.625 28.5 30.625H9.50004C7.75114 30.625 6.33337 29.3192 6.33337 27.7083V14.5833M31.6667 14.5833H6.33337M12.6667 4.375V10.2083M25.3334 4.375V10.2083" stroke="#898989" stroke-width="3" stroke-linecap="round"/>
+                            <path d="M13.4583 17.5H10.2917C9.85444 17.5 9.5 17.8265 9.5 18.2292V21.1458C9.5 21.5485 9.85444 21.875 10.2917 21.875H13.4583C13.8956 21.875 14.25 21.5485 14.25 21.1458V18.2292C14.25 17.8265 13.8956 17.5 13.4583 17.5Z" fill="#898989"/>
+                            <path d="M20.5833 17.5H17.4167C16.9794 17.5 16.625 17.8265 16.625 18.2292V21.1458C16.625 21.5485 16.9794 21.875 17.4167 21.875H20.5833C21.0206 21.875 21.375 21.5485 21.375 21.1458V18.2292C21.375 17.8265 21.0206 17.5 20.5833 17.5Z" fill="#898989"/>
+                            <path d="M27.7083 17.5H24.5417C24.1044 17.5 23.75 17.8265 23.75 18.2292V21.1458C23.75 21.5485 24.1044 21.875 24.5417 21.875H27.7083C28.1456 21.875 28.5 21.5485 28.5 21.1458V18.2292C28.5 17.8265 28.1456 17.5 27.7083 17.5Z" fill="#898989"/>
+                        </svg>
+                        ${g.createdAt}
+                    </p>
+                    <p>
+                        <svg width="30" height="30" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.77966 17.2487V13.1325C8.77966 8.02957 12.4026 5.9329 16.8272 8.49207L20.3884 10.5579L23.9497 12.6237C28.3742 15.1829 28.3742 19.3608 23.9497 21.9199L20.3884 23.9858L16.8272 26.0516C12.4026 28.5645 8.77966 26.4833 8.77966 21.365V17.2487Z" stroke="#898989" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        ${g.category}
+                    </p>
+                    <p>${g.status}</p>
+                </div>
+                
+                <div class="goal-detail-description">
+                    <p>
+                        <h2>Description</h2>
+                        <hr>
+                        <p>${g.description || 'No description provided.'}</p>
+                    </p>
+                </div>
+                
+            `;
+
+            document.getElementById('editButton').onclick = () => location.href = `/edit?id=${id}`;
+            document.getElementById('deleteButton').onclick = async () => {
+                if(confirm('Delete this goal?')) {
+                    await fetch(`/api/goals?id=${id}`, { method: 'DELETE' });
+                    location.href = '/';
+                }
+            };
+        }
+        load();
+    </script>
+</body>
+</html>
