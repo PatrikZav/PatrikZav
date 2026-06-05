@@ -43,7 +43,7 @@ a{
 
 /*----------Header----------*/
 header{
-    background: url("../PatrikZav/photo/headerBackground.png") center center no-repeat;
+    background: url("../PatrikZav/photo/headerBackground.jpg") center center no-repeat;
     background-size: cover;
     box-shadow: inset -1px -84px 61px 17px black;
     height: 900px;
