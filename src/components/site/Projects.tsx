@@ -18,12 +18,6 @@ const projects = [
     href: "https://patrikzav.github.io/PatrikZav/BMWwebsite/index.html",
   },
   {
-    name: "Second Personal Website",
-    year: "2025",
-    desc: "Hand-coded one year into my IT studies in pure HTML, CSS and JavaScript. Fully responsive and optimized — built on an older stack that I've since outgrown.",
-    href: "https://patrikzav.github.io/PatrikZav/",
-  },
-  {
     name: "Budget App",
     year: "2025",
     desc: "My first team project and first JavaScript app — track income and expenses with Local Storage.",
