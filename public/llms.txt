@@ -1,0 +1,7 @@
+# Patrik Zavadil
+
+> Personal site of Patrik Zavadil — high school developer and creator from Kroměříž, Czech Republic, building web apps and videos.
+
+## Pages
+
+- [Home](/): About Patrik, his story, projects, inspirations, and contact.

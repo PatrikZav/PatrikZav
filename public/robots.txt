@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://personal-shine-studio-97.lovable.app/sitemap.xml
